@@ -1,30 +1,25 @@
+import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Header({ linkTo, linkIcon, linkText }) {
   return (
-    <header
-      className="row p-2 d-flex justify-content-between align-items-center"
-      style={{ height: '100px' }}
-    >
-      <div className="d-flex col-10 p-0 align-items-center">
-        <img className="col-1" src={logo} alt="Wealth Health" />
-        <h1 className="col-1 display-5">HRnet</h1>
-      </div>
-      <Link
-        className="col-2 d-flex text-decoration-none font-weight-bold text-primary"
-        to={linkTo}
-      >
-        <p className="fs-5 p-3 m-0 col-12 text-end">
-          <img
-            className="m-2"
-            style={{ height: '30px' }}
-            src={linkIcon}
-            alt="employee list"
-          />
-          {linkText}
-        </p>
-      </Link>
-    </header>
+    <Container fluid className="py-2 px-5">
+      <Row>
+        <Col className="d-flex align-items-center">
+          <img src={logo} width="150px" alt="Wealth Health" />
+          <h1 className="display-5">HRnet</h1>
+        </Col>
+        <Col className="d-flex align-items-center justify-content-end">
+          <Link className="text-decoration-none text-primary" to={linkTo}>
+            <p className="fs-5 m-0">
+              <FontAwesomeIcon className="mx-2" icon={linkIcon} />
+              {linkText}
+            </p>
+          </Link>
+        </Col>
+      </Row>
+    </Container>
   );
 }

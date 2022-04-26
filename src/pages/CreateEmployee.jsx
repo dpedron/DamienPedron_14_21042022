@@ -1,6 +1,6 @@
 import EmployeeForm from '../components/EmployeeForm';
 import Header from '../components/Header';
-import headerIcon from '../assets/img/users-solid.svg';
+import { faUsers } from '@fortawesome/free-solid-svg-icons';
 
 export default function CreateEmployee() {
   return (
@@ -8,12 +8,10 @@ export default function CreateEmployee() {
       <Header
         linkTo="/employee-list"
         linkText="Employee list"
-        linkIcon={headerIcon}
+        linkIcon={faUsers}
       />
-      <main className="row d-flex flex-column align-items-center">
-        <div className="col-6 d-flex justify-content-center">
-          <h1 className="h3">Create Employee</h1>
-        </div>
+      <main className="container d-flex flex-column align-items-center">
+        <h1 className="h3">Create Employee</h1>
         <EmployeeForm />
       </main>
     </>
