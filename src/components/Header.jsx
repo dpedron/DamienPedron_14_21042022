@@ -2,6 +2,15 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../assets/img/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
+
+/**
+ * Header with nav
+ * @param {string} linkTo
+ * @param {Object} linkIcon
+ * @param {string} linkText
+ * @returns {JSX}
+ */
 
 export default function Header({ linkTo, linkIcon, linkText }) {
   return (
@@ -23,3 +32,9 @@ export default function Header({ linkTo, linkIcon, linkText }) {
     </Container>
   );
 }
+
+Header.propTypes = {
+  linkTo: PropTypes.string,
+  linkIcon: PropTypes.object,
+  linkText: PropTypes.string,
+};

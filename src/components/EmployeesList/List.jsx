@@ -5,6 +5,7 @@ import {
   faSortDown,
   faSortUp,
 } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
 
 /**
  * Table of the employees
@@ -74,3 +75,11 @@ export default function List({
     </Table>
   );
 }
+
+List.propTypes = {
+  getTableProps: PropTypes.func,
+  getTableBodyProps: PropTypes.func,
+  page: PropTypes.array,
+  prepareRow: PropTypes.func,
+  headerGroups: PropTypes.array,
+};

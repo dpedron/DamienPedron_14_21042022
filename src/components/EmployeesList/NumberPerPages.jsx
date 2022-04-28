@@ -1,4 +1,5 @@
 import { Col, Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 /**
  * To change the number of employee display on the list
@@ -29,3 +30,8 @@ export default function NumberPerPages({ pageSize, setPageSize }) {
     </Col>
   );
 }
+
+NumberPerPages.propTypes = {
+  pageSize: PropTypes.number,
+  setPageSize: PropTypes.func,
+};

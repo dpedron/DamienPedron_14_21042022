@@ -16,6 +16,11 @@ import Search from '../components/EmployeesList/Search';
 import List from '../components/EmployeesList/List';
 import EntriesInfo from '../components/EmployeesList/EntriesInfo';
 
+/**
+ * Page with a table of all employees
+ * @returns {JSX}
+ */
+
 export default function EmployeesList() {
   const { employeesData } = useContext(EmployeesContext);
 

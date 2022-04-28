@@ -1,9 +1,10 @@
 import { Col, Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 /**
  * Search in the table
- * @param {string} filter Search input value
- * @param {function} setFilter Set the search input value
+ * @param {string} filter
+ * @param {function} setFilter
  * @returns {JSX}
  */
 
@@ -21,3 +22,8 @@ export default function Search({ filter, setFilter }) {
     </Col>
   );
 }
+
+Search.propTypes = {
+  filter: PropTypes.string,
+  setFilter: PropTypes.func,
+};

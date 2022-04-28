@@ -1,10 +1,11 @@
 import { Col } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 /**
  * Shows the user the position of the entries he is looking at
  * @param {number} pageSize Number of employees display per page
  * @param {number} pageIndex Index of the current page
- * @param {Array.<Object>} employeesData All employees data
+ * @param {Array.<Object>} employeesData
  * @returns {JSX}
  */
 
@@ -19,3 +20,9 @@ export default function EntriesInfo({ pageSize, pageIndex, employeesData }) {
     </Col>
   );
 }
+
+EntriesInfo.propTypes = {
+  pageSize: PropTypes.number,
+  pageIndex: PropTypes.number,
+  employeesData: PropTypes.array,
+};
