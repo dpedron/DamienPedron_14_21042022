@@ -11,8 +11,11 @@ import PropTypes from 'prop-types';
 export default function Search({ filter, setFilter }) {
   return (
     <Col className="d-flex align-items-center justify-content-end">
-      <p className="my-0 me-2">Search :</p>
+      <Form.Label htmlFor="search" className="my-0 me-2">
+        Search :
+      </Form.Label>
       <Form.Control
+        id="search"
         size="sm"
         style={{ width: '170px' }}
         type="text"

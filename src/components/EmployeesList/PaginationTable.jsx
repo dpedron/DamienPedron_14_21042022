@@ -54,13 +54,13 @@ export default function PaginationTable({
           // To display ellipsis
           const displayEllipsis =
             // After pagination 5, when there are more than 5 pages and current page is one of the first 4
-            (p > 4 && p === 6) ||
+            (p > 4 && p === 5) ||
             // On pagination 2 before and 2 after current page, when current page is between 5 and 4 from the end
             (currentPageIndex > 3 &&
               currentPageIndex < nbOfPages - 3 &&
               (p === currentPageIndex - 2 || p === currentPageIndex + 2)) ||
             // After pagination 1 when current page is one of the last 3 pages
-            (currentPageIndex >= nbOfPages - 3 && p === 2);
+            (currentPageIndex >= nbOfPages - 3 && p === 1);
 
           if (displayPagination) {
             return (

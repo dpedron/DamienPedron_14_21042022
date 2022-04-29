@@ -25,7 +25,9 @@ export default function FormSelect({
         {error && <span className="text-danger"> required</span>}
       </Form.Label>
       <Form.Select
-        {...register(inputName, { required: true })}
+        {...register(inputName, {
+          required: true,
+        })}
         defaultValue=""
         id={inputName}
         isInvalid={error}
@@ -33,10 +35,10 @@ export default function FormSelect({
         <option value="" disabled hidden>
           Choose here
         </option>
-        {options.map((state, i) => {
+        {options.map((option, i) => {
           return (
-            <option key={state + i} value={state}>
-              {state.name}
+            <option key={option + i} value={option.name}>
+              {option.name}
             </option>
           );
         })}

@@ -17,7 +17,7 @@ export default function Header({ linkTo, linkIcon, linkText }) {
     <Container fluid className="py-2 px-5">
       <Row>
         <Col className="d-flex align-items-center">
-          <img src={logo} width="150px" alt="Wealth Health" />
+          <img src={logo} width="150px" height="137px" alt="Wealth Health" />
           <h1 className="display-5">HRnet</h1>
         </Col>
         <Col className="d-flex align-items-center justify-content-end">
