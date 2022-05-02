@@ -1,4 +1,5 @@
-import { Pagination, Col } from 'react-bootstrap';
+import Pagination from 'react-bootstrap/Pagination';
+import Col from 'react-bootstrap/Col';
 import PropTypes from 'prop-types';
 
 /**

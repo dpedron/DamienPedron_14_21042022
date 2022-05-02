@@ -1,10 +1,8 @@
-import { Table } from 'react-bootstrap';
+import Table from 'react-bootstrap/Table';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faSort,
-  faSortDown,
-  faSortUp,
-} from '@fortawesome/free-solid-svg-icons';
+import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
+import { faSortDown } from '@fortawesome/free-solid-svg-icons/faSortDown';
+import { faSortUp } from '@fortawesome/free-solid-svg-icons/faSortUp';
 import PropTypes from 'prop-types';
 
 /**

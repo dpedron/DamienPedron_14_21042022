@@ -1,4 +1,5 @@
-import { Container, Alert } from 'react-bootstrap';
+import Alert from 'react-bootstrap/Alert';
+import Container from 'react-bootstrap/Container';
 import PropTypes from 'prop-types';
 
 /**

@@ -1,7 +1,8 @@
 import Header from '../components/Header';
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons/faUserPlus';
 import { useContext, useMemo } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import { EmployeesContext } from '../utils/context';
 import {
   useTable,

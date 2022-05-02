@@ -1,9 +1,12 @@
 import Header from '../components/Header';
-import { faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers';
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { states, departments } from '../utils/selectOptions';
-import { Form, Button, Container, Row } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import { EmployeesContext } from '../utils/context';
 import FormInput from '../components/EmployeeForm/FormInput';
 import FormSelect from '../components/EmployeeForm/FormSelect';
