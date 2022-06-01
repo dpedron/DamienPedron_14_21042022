@@ -1,5 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import PropTypes from 'prop-types';
+import SelectMenu from 'select-menu--p14';
+import { useEffect } from 'react';
 
 /**
  * Form select
@@ -18,31 +20,46 @@ export default function FormSelect({
   register,
   options,
 }) {
+  useEffect(() => {
+    selectError();
+  });
+
+  function selectError() {
+    const selectButton = document.getElementById(`${inputName}-button`);
+    if (selectButton) {
+      error
+        ? (selectButton.style.borderColor = '#dc3545')
+        : (selectButton.style.borderColor = '');
+    }
+  }
+
   return (
     <>
-      <Form.Label className="mt-3" htmlFor={inputName}>
+      <Form.Label className="mt-3 p-0" htmlFor={inputName}>
         {labelText}
         {error && <span className="text-danger"> required</span>}
       </Form.Label>
-      <Form.Select
-        {...register(inputName, {
-          required: true,
-        })}
-        defaultValue=""
-        id={inputName}
-        isInvalid={error}
-      >
-        <option value="" disabled hidden>
-          Choose here
-        </option>
-        {options.map((option, i) => {
-          return (
-            <option key={option + i} value={option.name}>
-              {option.name}
-            </option>
-          );
-        })}
-      </Form.Select>
+      <SelectMenu>
+        <Form.Select
+          {...register(inputName, {
+            required: true,
+          })}
+          defaultValue=""
+          id={inputName}
+          isInvalid={error}
+        >
+          <option value="" disabled hidden>
+            Choose here
+          </option>
+          {options.map((option, i) => {
+            return (
+              <option key={option + i} value={option.name}>
+                {option.name}
+              </option>
+            );
+          })}
+        </Form.Select>
+      </SelectMenu>
     </>
   );
 }
