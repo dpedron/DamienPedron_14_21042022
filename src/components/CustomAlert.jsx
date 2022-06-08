@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
  * @returns {JSX}
  */
 
-export default function CustomAlert({ setAlert, variant, alertText }) {
+export default function CustomAlert({ variant, alertText }) {
   return (
     <Container
       fluid
@@ -28,7 +28,7 @@ export default function CustomAlert({ setAlert, variant, alertText }) {
           className="btn-close p-2"
           data-bs-dismiss="alert"
           aria-label="Close"
-          onClick={() => setAlert(false)}
+          onClick={() => document.location.reload()}
         ></button>
       </Alert>
     </Container>

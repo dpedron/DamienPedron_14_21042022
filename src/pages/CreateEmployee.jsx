@@ -18,7 +18,7 @@ import CustomAlert from '../components/CustomAlert';
  */
 
 export default function CreateEmployee() {
-  const { register, handleSubmit, formState, reset } = useForm({
+  const { register, handleSubmit, formState } = useForm({
     mode: 'onTouched',
   });
   const { isSubmitting, errors } = formState;
@@ -26,8 +26,7 @@ export default function CreateEmployee() {
   const { addEmployee } = useContext(EmployeesContext);
 
   const onSubmit = (newEmployee) => {
-    // Reset the form, show alert, add employee to the list
-    reset();
+    // Show alert, add employee to the list
     setAlert(true);
     addEmployee(newEmployee);
   };
