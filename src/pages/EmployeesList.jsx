@@ -58,7 +58,7 @@ export default function EmployeesList() {
     <>
       <Header linkTo="/" linkText="Create Employee" linkIcon={faUserPlus} />
       <main className="container d-flex flex-column align-items-center">
-        <h1 className="h3 mb-3">Current Employees Employee</h1>
+        <h1 className="h3 mb-3">Current Employees</h1>
         <Container>
           <Row className="d-flex mb-3">
             <NumberPerPages pageSize={pageSize} setPageSize={setPageSize} />
